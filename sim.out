@@ -1,0 +1,44 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x5af4de95f670 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x5af4de95f800 .scope module, "simple_adder_tb" "simple_adder_tb" 3 1;
+ .timescale 0 0;
+v0x5af4de9706c0_0 .var "a", 31 0;
+v0x5af4de9707b0_0 .var "b", 31 0;
+v0x5af4de970880_0 .net "sum", 31 0, L_0x5af4de970980;  1 drivers
+S_0x5af4de925cf0 .scope module, "dut" "simple_adder" 3 7, 4 1 0, S_0x5af4de95f800;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /INPUT 32 "b";
+    .port_info 2 /OUTPUT 32 "sum";
+v0x5af4de9277b0_0 .net "a", 31 0, v0x5af4de9706c0_0;  1 drivers
+v0x5af4de927ba0_0 .net "b", 31 0, v0x5af4de9707b0_0;  1 drivers
+v0x5af4de970580_0 .net "sum", 31 0, L_0x5af4de970980;  alias, 1 drivers
+L_0x5af4de970980 .arith/sum 32, v0x5af4de9706c0_0, v0x5af4de9707b0_0;
+    .scope S_0x5af4de95f800;
+T_0 ;
+    %pushi/vec4 5, 0, 32;
+    %store/vec4 v0x5af4de9706c0_0, 0, 32;
+    %pushi/vec4 3, 0, 32;
+    %store/vec4 v0x5af4de9707b0_0, 0, 32;
+    %delay 10, 0;
+    %vpi_call/w 3 19 "$display", "a = %0d, b = %0d, sum = %0d", v0x5af4de9706c0_0, v0x5af4de9707b0_0, v0x5af4de970880_0 {0 0 0};
+    %vpi_call/w 3 21 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "tb/simple_adder_tb.sv";
+    "rtl/simple_adder.sv";
