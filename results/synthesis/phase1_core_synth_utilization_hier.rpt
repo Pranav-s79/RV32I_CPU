@@ -1,0 +1,33 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Thu Oct 29 21:42:48 2026
+| Host         : LAPTOP-K7CE36LT running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file build/vivado/baseline/core_synth_utilization_hier.rpt
+| Design       : rv32i_core
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++----------------+-----------------+------------+------------+---------+------+-----+--------+--------+------------+
+|    Instance    |      Module     | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++----------------+-----------------+------------+------------+---------+------+-----+--------+--------+------------+
+| rv32i_core     |           (top) |       1079 |       1031 |      48 |    0 | 101 |      0 |      0 |          0 |
+|   (rv32i_core) |           (top) |          1 |          1 |       0 |    0 |  69 |      0 |      0 |          0 |
+|   u_alu        |             alu |         57 |         57 |       0 |    0 |   0 |      0 |      0 |          0 |
+|   u_next_pc    |   next_pc_logic |         56 |         56 |       0 |    0 |   0 |      0 |      0 |          0 |
+|   u_pc         | program_counter |        404 |        404 |       0 |    0 |  32 |      0 |      0 |          0 |
+|   u_regfile    |   register_file |        564 |        516 |      48 |    0 |   0 |      0 |      0 |          0 |
++----------------+-----------------+------------+------------+---------+------+-----+--------+--------+------------+
+
+

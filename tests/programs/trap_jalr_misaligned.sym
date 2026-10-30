@@ -1,0 +1,3 @@
+00000000 _start
+0000000c expected_trap
+00000010 landing

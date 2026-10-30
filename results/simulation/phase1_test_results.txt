@@ -1,0 +1,58 @@
+# Phase 1 test results
+# Date: 2026-10-29 21:48:25 CDT
+# Tools: Icarus Verilog version 11.0 (stable) (); Python 3.10.12; Vivado 2026.1 xsim
+# Base commit: 8cdcd1f + uncommitted Phase 1 work
+
+$ make lint
+./scripts/lint.sh
+PASS: iverilog -Wall elaboration of rv32i_soc_top (no warnings)
+PASS: iverilog -Wall elaboration of rv32i_core (no warnings)
+SKIP: verilator not installed (optional: sudo apt install verilator)
+exit=0
+
+$ make test
+PASS: tb_program_counter (9 checks)
+PASS: tb_register_file (2102 checks)
+PASS: tb_alu (5025 checks)
+PASS: tb_immediate_generator (10020 checks)
+PASS: tb_control_unit (15656 checks)
+PASS: tb_branch_unit (3020 checks)
+PASS: tb_next_pc_logic (38 checks)
+PASS: tb_load_store_unit (101 checks)
+==== ALL UNIT TESTS PASSED ====
+PASS: rv32i_full                397 instructions retired, trap cause=11 pc=0x000005f4 tval=0x00000000
+PASS: c_simple                   27 instructions retired, trap cause=11 pc=0x00000008 tval=0x00000000
+PASS: trap_illegal                3 instructions retired, trap cause= 2 pc=0x0000000c tval=0x02c585b3
+PASS: trap_ebreak                 1 instructions retired, trap cause= 3 pc=0x00000004 tval=0x00000004
+PASS: trap_load_misaligned        2 instructions retired, trap cause= 4 pc=0x00000008 tval=0x00010002
+PASS: trap_store_misaligned       5 instructions retired, trap cause= 6 pc=0x00000014 tval=0x00010005
+PASS: trap_load_fault             2 instructions retired, trap cause= 5 pc=0x00000008 tval=0x00000100
+PASS: trap_store_fault            7 instructions retired, trap cause= 7 pc=0x0000001c tval=0x00011000
+PASS: trap_jalr_misaligned        3 instructions retired, trap cause= 0 pc=0x0000000c tval=0x00000012
+PASS: trap_branch_misaligned      3 instructions retired, trap cause= 0 pc=0x0000000c tval=0x0000000e
+PASS: trap_fetch_fault            2 instructions retired, trap cause= 1 pc=0x00001000 tval=0x00001000
+==== CORE TESTS: all 11 programs PASSED (RTL matches reference model) ====
+==== ALL TESTS PASSED ====
+exit=0
+
+$ make test-xsim
+xsim PASS: tb_program_counter (9 checks)
+xsim PASS: tb_register_file (2102 checks)
+xsim PASS: tb_alu (5025 checks)
+xsim PASS: tb_immediate_generator (10020 checks)
+xsim PASS: tb_control_unit (15643 checks)
+xsim PASS: tb_branch_unit (3020 checks)
+xsim PASS: tb_next_pc_logic (38 checks)
+xsim PASS: tb_load_store_unit (101 checks)
+xsim PASS: core program c_simple (trace matches reference model)
+xsim PASS: core program rv32i_full (trace matches reference model)
+xsim PASS: core program trap_branch_misaligned (trace matches reference model)
+xsim PASS: core program trap_ebreak (trace matches reference model)
+xsim PASS: core program trap_fetch_fault (trace matches reference model)
+xsim PASS: core program trap_illegal (trace matches reference model)
+xsim PASS: core program trap_jalr_misaligned (trace matches reference model)
+xsim PASS: core program trap_load_fault (trace matches reference model)
+xsim PASS: core program trap_load_misaligned (trace matches reference model)
+xsim PASS: core program trap_store_fault (trace matches reference model)
+xsim PASS: core program trap_store_misaligned (trace matches reference model)
+exit=0

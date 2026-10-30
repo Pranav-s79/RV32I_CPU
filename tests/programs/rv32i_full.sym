@@ -1,0 +1,12 @@
+00000000 _start
+00000028 auipc_0
+00000038 auipc_1
+00000544 jal_ret
+00000560 jalr_ret
+00000564 jalr_target
+00000578 jalr_same_ret
+0000057c jalr_same
+00000594 jalr_neg
+000005e4 pass
+000005f8 fail
+00000600 double_it

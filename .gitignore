@@ -1,0 +1,71 @@
+# ---------------------------------------------------------------
+# Conservative ignore list. Source RTL, testbenches, scripts, docs,
+# constraints, configs, and selected reports in results/ are kept.
+# ---------------------------------------------------------------
+
+# Local build output (scripts write here)
+build/
+
+# --- Vivado generated files ---
+.Xil/
+*.cache/
+*.hw/
+*.runs/
+*.sim/
+*.gen/
+*.ip_user_files/
+*.hbs/
+xsim.dir/
+vivado*.jou
+vivado*.log
+vivado*.str
+vivado_pid*.zip
+webtalk*
+usage_statistics_webtalk.*
+clockInfo.txt
+xvlog.log
+xvlog.pb
+xelab.log
+xelab.pb
+xsim*.log
+xsim*.jou
+*.wdb
+*.dcp
+*.bit
+*.ltx
+
+# --- Simulation executables and waveforms ---
+*.vvp
+a.out
+*.vcd
+*.fst
+*.lxt
+*.lx2
+*.ghw
+# ...except intentionally saved waveforms
+!results/simulation/waveforms/*.vcd
+
+# --- Compiled software / generated binaries ---
+*.o
+*.elf
+*.bin
+*.map
+
+# --- Editor / OS files ---
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Python ---
+__pycache__/
+*.pyc
+
+# --- Local agent settings ---
+.claude/settings.local.json
