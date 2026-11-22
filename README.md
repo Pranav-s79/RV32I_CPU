@@ -14,15 +14,16 @@ A learning-focused implementation of a 32-bit RISC-V RV32I processor in SystemVe
 |-------|-------|
 | 0 | Development environment and toolchain validation |
 | 1 | Single-cycle RV32I CPU |
-| 2 | Functional verification and software execution |
-| 3 | 5-stage pipeline |
-| 4 | Hazard detection and forwarding |
-| 5 | ISA/reference verification |
-| 6 | FPGA implementation and baseline characterization |
-| 7 | Performance and area optimization |
-| 8 | Final benchmarking, documentation, and resume results |
+| 2 | 5-stage pipeline, hazards, and architectural equivalence |
+| 3 | Expanded ISA/reference-model verification |
+| 4 | UART, MMIO, and bare-metal C runtime |
+| 5 | Branch prediction and performance counters |
+| 6 | Timing optimization and static timing analysis |
+| 7 | Formal verification |
+| 8 | Caches and realistic memory hierarchy |
+| 9 | CPI stack and final performance study |
 
-Current phase: **Phase 1 complete (pending student review and milestone commit)**: a single-cycle RV32I CPU, verified in simulation, with a measured Vivado baseline. See [`docs/phase_1/`](docs/phase_1/README.md).
+Current phase: **Phase 1 complete; Phase 2 planning**. The single-cycle RV32I baseline is verified in simulation and has a measured Vivado baseline. The next milestone is a 5-stage pipeline, planned in [`docs/phase_2/`](docs/phase_2/README.md). Phase 1 still needs student review, reflection, and its milestone commit before it is formally closed.
 
 ## Phase 1 status
 
