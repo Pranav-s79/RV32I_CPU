@@ -31,6 +31,8 @@ Suggested initial module boundaries:
 
 The exact module split and branch-resolution stage remain student decisions recorded in `decisions.md` before RTL changes.
 
+For the signal-by-signal proposal, stage payloads, hazard rules, and memory timing tradeoff, see [`../architecture/pipeline_proposal.md`](../architecture/pipeline_proposal.md).
+
 ## Agent assistance
 
 Codex may review the pipeline specification and student RTL, explain hazards and waveforms, help extend the verification harness, and document measurements. Repository policy reserves major CPU blocks for the student to implement.

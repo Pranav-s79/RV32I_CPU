@@ -19,7 +19,7 @@ Items marked *(student)* are for the student to write in their own words.
 
 ## Things agents/tools assisted with
 
-- Codex prepared the Phase 2 planning documents and aligned the root roadmap with the supplied project guide (2026-11-22).
+- Codex prepared the Phase 2 planning documents, pipeline architecture proposal, and aligned the root roadmap with the supplied project guide (2026-11-22).
 
 ## Questions to revisit
 

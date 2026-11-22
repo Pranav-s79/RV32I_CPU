@@ -49,3 +49,5 @@ Next PC = PC + 4, or branch/jump target
 ```
 
 Detailed description of the implemented design: [`../architecture.md`](../architecture.md).
+
+Pipeline design proposal for Phase 2: [`pipeline_proposal.md`](pipeline_proposal.md).
