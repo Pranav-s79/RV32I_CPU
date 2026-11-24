@@ -1,6 +1,6 @@
 # Baselines
 
-A baseline is a recorded, reproducible reference point that later changes are compared against. No baselines exist yet; the first is expected in Phase 6 (FPGA characterization of the single-cycle design).
+A baseline is a recorded, reproducible reference point that later changes are compared against.
 
 ## What each baseline records
 
@@ -20,4 +20,4 @@ Performance comparisons only mean something when both sides are measured the sam
 
 ## Naming
 
-One file per baseline, e.g. `B001_single_cycle.md`. Experiments in `docs/phase_N/experiments.md` reference baselines by ID.
+One file per baseline, e.g. `B001_single_cycle.md`. Later results reference baselines by ID.

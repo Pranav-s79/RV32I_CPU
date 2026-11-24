@@ -4,7 +4,7 @@
 |-------|-------|
 | **Baseline ID** | B001 |
 | **Date measured** | 2026-10-29 |
-| **Design version** | Uncommitted working tree on top of commit `8cdcd1f`. RTL file hashes in [`B001_rtl_sha256.txt`](B001_rtl_sha256.txt). Replace with the Phase 1 milestone commit hash once committed. |
+| **Design version** | Commit `f9d7485`. RTL file hashes in [`B001_rtl_sha256.txt`](B001_rtl_sha256.txt). Later commits changed only header comments in `program_counter.sv` and `instruction_memory.sv`. |
 | **Configuration** | Single-cycle; 4 KiB instruction ROM + 4 KiB data RAM, both asynchronous read (LUT-based); reset vector `0x0`; trap = halt; no CSRs |
 | **Top modules measured** | `rv32i_soc_top` (implemented), `rv32i_core` (synthesized) |
 | **Target FPGA** | Zynq-7000 `xc7z010clg400-1` (Zybo Z7-10) |
@@ -12,7 +12,7 @@
 | **Tool / settings** | Vivado 2026.1, non-project batch, `synth_design -mode out_of_context`, default directives for synth/opt/place/route, no phys_opt |
 | **Script** | `scripts/vivado/synth_baseline.tcl` (`make synth`) |
 | **ROM contents** | `tests/programs/rv32i_full.hex` |
-| **Test version** | `make test`: 8/8 unit testbenches and 11/11 programs pass in Icarus 11.0 and Vivado 2026.1 xsim (same working tree) |
+| **Test version** | `make test`: 8/8 unit testbenches and 11/11 programs pass in Icarus 11.0 and Vivado 2026.1 xsim (same commit) |
 
 ## Measured results
 

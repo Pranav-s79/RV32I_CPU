@@ -2,11 +2,6 @@
 // instruction_memory.sv
 // Read-only instruction memory with an ASYNCHRONOUS (combinational) read.
 //
-// Started from the student's Phase 1 draft (a hard-coded case statement).
-// Replaced the case statement with an array loaded from a hex file so any
-// program can be run. The original draft is preserved in
-// docs/phase_1/student_drafts/instruction_memory.sv.
-//
 // Why asynchronous: in a single-cycle CPU the instruction must appear in the
 // SAME cycle its address (the PC) is presented. FPGA block RAM only has a
 // registered (synchronous) read, which would add a cycle. So this memory

@@ -3,11 +3,6 @@
 // The PC register: a 32-bit flip-flop bank holding the address of the
 // instruction being executed this cycle.
 //
-// Started from the student's Phase 1 draft (always PC + 4, reset to 0).
-// Extended so the core can choose the next PC (branches, jumps) and
-// freeze it (after a trap/halt). The original draft is preserved in
-// docs/phase_1/student_drafts/program_counter.sv.
-//
 // Circuit: 32 D flip-flops with synchronous reset and a clock enable.
 //   - reset  = 1 at a rising clock edge -> pc becomes RESET_VECTOR
 //   - enable = 1 at a rising clock edge -> pc becomes next_pc

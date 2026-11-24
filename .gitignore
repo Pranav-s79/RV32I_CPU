@@ -1,7 +1,4 @@
-# ---------------------------------------------------------------
-# Conservative ignore list. Source RTL, testbenches, scripts, docs,
-# constraints, configs, and selected reports in results/ are kept.
-# ---------------------------------------------------------------
+# Build output and tool-generated files.
 
 # Local build output (scripts write here)
 build/
@@ -42,8 +39,6 @@ a.out
 *.lxt
 *.lx2
 *.ghw
-# ...except intentionally saved waveforms
-!results/simulation/waveforms/*.vcd
 
 # --- Compiled software / generated binaries ---
 *.o
@@ -67,5 +62,10 @@ desktop.ini
 __pycache__/
 *.pyc
 
-# --- Local agent settings ---
-.claude/settings.local.json
+# --- Local notes and tool config (not part of the design) ---
+lessons/
+CLAUDE.md
+AGENTS.md
+agents/
+.claude/
+sim.out

@@ -115,7 +115,7 @@ To show the tests can fail, these bugs were planted one at a time in a scratch c
 
 ## Reading the waveforms
 
-Program tests dump VCD files to `build/sim/core/<program>.vcd` for `rv32i_full`, `c_simple`, and `trap_load_misaligned`. Unit tests dump to `build/sim/tb_*.vcd`. Copies of two are saved in `results/simulation/waveforms/`.
+Program tests dump VCD files to `build/sim/core/<program>.vcd` for `rv32i_full`, `c_simple`, and `trap_load_misaligned`. Unit tests dump to `build/sim/tb_*.vcd`.
 
 GTKWave is not installed. To view them: `sudo apt install gtkwave`, then `gtkwave build/sim/core/rv32i_full.vcd`. In Vivado you can instead run the testbench in the GUI project (see the README).
 
@@ -137,7 +137,7 @@ Tip: everything combinational settles during the cycle; values are "real" just b
 ## Known gaps
 
 - No official compliance suite yet (`riscv-tests` / `riscv-arch-test`). Planned for Phase 5.
-- The reference model was written by the same author (Claude) as the RTL. It shares no code or structure, and it agrees with hand-computed expectations, but it is not a third-party model like Spike or Sail.
+- The reference model is in-house. It shares no code or structure with the RTL and agrees with hand-computed expectations, but it is not a third-party model like Spike or Sail.
 - No random instruction generator (constrained-random programs). The program tests are directed.
 - No formal verification.
 - Programs are small (≤ 400 instructions); no long-running software.

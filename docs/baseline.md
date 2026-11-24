@@ -76,7 +76,7 @@ Start: u_core/u_pc/pc_reg[6]/C                        (PC flip-flop)
 End:   u_core/u_regfile/.../DIB0                       (register file write data)
 ```
 
-This is the **load instruction path**, as predicted in `instruction_walkthrough.md`: two memory reads in series in one cycle. Signs of what limits it:
+This is the **load instruction path**: two memory reads in series in one cycle. Signs of what limits it:
 
 - **Routing is 79 % of the delay.** Huge fan-outs: one PC bit drives 339 loads (the ROM is a big LUT tree), and one data-memory address bit drives 517 LUTRAM cells (4 KiB in 64-bit LUTRAM pieces).
 - **Deep logic.** 19 levels on the worst path; most of the top 1,000 paths have 17–20 levels.
