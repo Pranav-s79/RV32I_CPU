@@ -32,7 +32,7 @@ Current phase: **Phase 1 complete; Phase 2 planning**. The single-cycle RV32I ba
 | ISA | RV32I: all 37 computational/memory/control instructions + FENCE, ECALL, EBREAK; illegal-instruction and misaligned/access-fault detection (trap = halt) |
 | Verification | 8 self-checking unit testbenches; 11 programs (incl. a C program) traced instruction-by-instruction against a Python reference model; passing in Icarus 11 and Vivado xsim |
 | Baseline (B001) | 2,054 LUTs, 47 FFs, 0 latches; WNS −7.194 ns @ 10 ns → est. Fmax ≈ 58 MHz; CPI = 1 |
-| Docs | [architecture](docs/architecture.md) · [SystemVerilog guide](docs/systemverilog_guide.md) · [instruction walkthrough](docs/instruction_walkthrough.md) · [verification](docs/verification.md) · [baseline](docs/baseline.md) · [interview guide](docs/phase1_interview_guide.md) |
+| Docs | [learning library](docs/learning/README.md) · [architecture](docs/architecture.md) · [SystemVerilog guide](docs/systemverilog_guide.md) · [instruction walkthrough](docs/instruction_walkthrough.md) · [verification](docs/verification.md) · [baseline](docs/baseline.md) · [interview guide](docs/phase1_interview_guide.md) |
 
 ## Software vs. hardware
 
